@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archive | Coleção de Infinitos</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="stars"></div>
+
+    <header>
+        <h1>THE ARCHIVE</h1>
+        <p class="subtitle">A Coleção Definitiva do Multiverso.</p>
+    </header>
+
+    <div class="main-content">
+        <h2 class="section-title">Acervo Atual</h2>
+        <main class="collection-grid">
+            
+            <div class="item-card" 
+                 data-title="O Último Suspiro de uma Estrela"
+                 data-desc="Capturado milissegundos antes do colapso total, este frasco de contenção magnética de classe-Z armazena a energia luminosa pura de uma supernova. A luz azul pulsante no centro não é eletricidade, é a "alma" de um sistema solar que não existe mais, suspensa no tempo. Requer 1.2 Gigawatts para manter o campo de contenção estável."
+                 data-image="Caiosalys/The-Archive/Gemini_Generated_Image_n2op32n2op32n2op.png">
+                <span class="tag">Astronomia</span>
+                <h3>Núcleo de Supernova Contido</h3>
+                <p class="card-preview-desc">Energia estelar pura capturada em um frasco de vácuo quântico.</p>
+            </div>
+
+            <div class="item-card"
+                 data-title="A Biblioteca de Alexandria (Cristalizada)"
+                 data-desc="Não são apenas textos digitalizados. Utilizando tecnologia de recuperação temporal, a essência física de cada pergaminho perdido foi reconstruída e fundida em estruturas de dados cristalinos. Ao tocar o cristal, o conhecimento flui diretamente para a mente do usuário. Contém sabedoria que reescreveria a história humana se liberada."
+                 data-image="Caiosalys/The-Archive/Gemini_Generated_Image_okbx2gokbx2gokbx.png">
+                <span class="tag">História Recuperada</span>
+                <h3>A Biblioteca de Alexandria</h3>
+                <p class="card-preview-desc">O conhecimento total do mundo antigo, salvo do incêndio em cristais de memória.</p>
+            </div>
+
+            <div class="item-card"
+                 data-title="Uma Grama de Antimatéria"
+                 data-desc="O item mais volátil da coleção. Esta única grama de antúrio está suspensa em um vácuo perfeito dentro de uma câmara Penning-Ioffe de ouro maciço e titânio. Se o campo falhar e ela tocar a matéria comum, a liberação de energia seria equivalente a uma ogiva termonuclear de 43 megatons. Uma beleza terrível."
+                 data-image="Caiosalys/The-Archive/Gemini_Generated_Image_lukt3ylukt3ylukt.png">
+                <span class="tag">Física</span>
+                <h3>Câmara de Antimatéria</h3>
+                <p class="card-preview-desc">Suspensão magnética perfeita. O objeto mais caro (e perigoso) já criado.</p>
+            </div>
+
+            <div class="item-card"
+                 data-title="O Fragmento do Éden"
+                 data-desc="Recuperado de coordenadas que não constam em nenhum mapa terrestre. Esta estrutura biológica luminescente desafia a classificação botânica conhecida. Ela não realiza fotossíntese, mas sim absorve 'intenções' do ambiente. Diz-se que estar na presença dela cura doenças degenerativas, mas causa alucinações vívidas de um jardim primordial."
+                 data-image="">
+                <span class="tag">botânica</span>
+                <h3>A Flor do Tempo</h3>
+                <p class="card-preview-desc">Uma planta que floresce a cada 500 anos, suas pétalas reagem à consciência do observador.</p>
+            </div>
+
+             <div class="item-card"
+                data-title="Relíquia da Atlântida: O Motor Poseidon"
+                data-desc="Recuperado a 12.000 metros de profundidade no Atlântico. Esta não é uma maquete, é o mecanismo central que energizava a cidade perdida. Feito de um 'coral metálico' vivo que conduz eletricidade com eficiência supercondutora. Ele ainda pulsa com uma leve energia geotérmica, aguardando ser reativado."
+                data-image="">
+               <span class="tag">Arqueologia Abissal</span>
+               <h3>O Motor de Atlântida</h3>
+               <p class="card-preview-desc">Artefato recuperado de explorações submarinas secretas. Feito de coral vivo e metal.</p>
+           </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="itemModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImg" src="" alt="Artefato">
+                </div>
+                <div class="modal-info">
+                    <span class="tag" id="modalTag">Tag do Item</span>
+                    <h2 id="modalTitle">Título do Item</h2>
+                    <p id="modalDesc">Descrição completa do item aqui.</p>
+                    <div class="acquisition-data">
+                        STATUS: CONTIDO<br>
+                        NÍVEL DE ACESSO: ÔMEGA<br>
+                        ID ARQUIVO: #X7-992B
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2077 The Archive Corporation. A realidade é apenas mais um item colecionável.
+    </footer>
+
+    <script>
+      
+        const modal = document.getElementById('itemModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const itemCards = document.querySelectorAll('.item-card');
+
+        
+        const modalImg = document.getElementById('modalImg');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalTag = document.getElementById('modalTag');
+
+       
+        function openModal(card) {
+            
+            const title = card.getAttribute('data-title');
+            const desc = card.getAttribute('data-desc');
+            const imgSrc = card.getAttribute('data-image');
+            const tagText = card.querySelector('.tag').innerText;
+
+           
+            modalTitle.innerText = title;
+            modalDesc.innerText = desc;
+            modalImg.src = imgSrc;
+            modalTag.innerText = tagText;
+
+           
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+       
+        itemCards.forEach(card => {
+            card.addEventListener('click', () => {
+                openModal(card);
+            });
+        });
+
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+       
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+    </script>
+
+</body>
+</html>
