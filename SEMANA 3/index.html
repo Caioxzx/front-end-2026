@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação de Aprendizado Front-end</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Avaliação de Conteúdo</h2>
+        <p>Sua opinião nos ajuda a melhorar.</p>
+        
+        <form>
+            <div class="section">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="section">
+                <label>O quanto você dominou o conteúdo estudado?</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="dominio" value="1"> 1 (Pouco)</label>
+                    <label><input type="radio" name="dominio" value="2"> 2</label>
+                    <label><input type="radio" name="dominio" value="3"> 3</label>
+                    <label><input type="radio" name="dominio" value="4"> 4</label>
+                    <label><input type="radio" name="dominio" value="5"> 5 (Muito)</label>
+                </div>
+            </div>
+
+            <div class="section">
+                <label for="clareza">A didática do material foi clara?</label>
+                <select id="clareza" name="clareza">
+                    <option value="excelente">Sim, perfeitamente</option>
+                    <option value="bom">Na maior parte do tempo</option>
+                    <option value="regular">Poderia ser melhor</option>
+                    <option value="ruim">Não foi clara</option>
+                </select>
+            </div>
+
+            <div class="section">
+                <label for="feedback">O que mais te desafiou nesse conteúdo?</label>
+                <textarea id="feedback" rows="4" placeholder="Conte-nos sua percepção..."></textarea>
+            </div>
+
+            <button type="submit">Enviar Avaliação</button>
+        </form>
+    </div>
+
+    <h7><audio id="musica">
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="https://s3.amazonaws.com/Syntaxxx/bigger-picture.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio><h7>
+    <script src="script.js"></script>
+</body>
+</html>
