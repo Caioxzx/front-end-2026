@@ -3,70 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hub</title>
+    <title>Meu Hub de Engenharia</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones via FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <h1>Olá, mundo! 👋</h1>
-        <p>O que deseja ver hoje?</p>
+        <div class="header-content">
+            <h1>Engenharia de Software 💻</h1>
+            <p>Repositório Central de Atividades - 3º Semestre</p>
+        </div>
     </header>
 
     <main class="container">
-        <!-- Atividade 1: Faculdade -->
-        <section class="card">
-            <div class="icon"><i class="fas fa-university"></i></div>
-            <h3>Faculdade</h3>
-            <p>Engenharia de Software - 3º Semestre</p>
-            <a href="SEMANA 1/index.html" class="btn">Ver Todas as atividades</a>
-        </section>
+        
+        <!-- DASHBOARD DE PROGRESSO (Opcional, mas fica massa) -->
+        <div class="status-bar">
+            <span>Status da Matéria: <strong>Em Andamento</strong></span>
+            <div class="progress-bg"><div class="progress-fill" style="width: 45%;"></div></div>
+        </div>
 
-        <!-- Atividade 2: Cursos Online -->
-        <section class="card">
-            <div class="icon"><i class="fas fa-laptop-code"></i></div>
-            <h3>Cursos Online</h3>
-            <p>Desenvolvimento Web, Python e UI/UX.</p>
-            <a href="#" class="btn">Continuar Aula</a>
-        </section>
+        <h2 class="section-title">Semanas de Estudo</h2>
+        
+        <div class="grid-atividades">
+            
+            <!-- SEMANA 1 -->
+            <section class="card-atividade">
+                <div class="badge">Concluído</div>
+                <div class="card-info">
+                    <span class="week-number">Semana 01</span>
+                    <h3>Introdução e Setup</h3>
+                    <p>Configuração de ambiente, Git, GitHub e primeiros comandos HTML.</p>
+                </div>
+                <a href="SEMANA 1/index.html" class="btn-link">Ver Atividade <i class="fas fa-external-link-alt"></i></a>
+            </section>
 
-        <!-- Atividade 3: Projetos -->
-        <section class="card">
-            <div class="icon"><i class="fas fa-folder-open"></i></div>
-            <h3>Projetos</h3>
-            <p>Repositórios no GitHub e portfólio pessoal.</p>
-            <a href="#" class="btn">Abrir Projetos</a>
-        </section>
+            <!-- SEMANA 2 -->
+            <section class="card-atividade">
+                <div class="badge">Concluído</div>
+                <div class="card-info">
+                    <span class="week-number">Semana 02</span>
+                    <h3>Tags Semânticas e CSS</h3>
+                    <p>Criação de layouts estruturados e estilização básica com CSS3.</p>
+                </div>
+                <a href="SEMANA 2/index.html" class="btn-link">Ver Atividade <i class="fas fa-external-link-alt"></i></a>
+            </section>
 
-        <!-- Atividade 4: Idiomas -->
-        <section class="card">
-            <div class="icon"><i class="fas fa-language"></i></div>
-            <h3>Idiomas</h3>
-            <p>Prática diária de Inglês e Espanhol.</p>
-            <a href="#" class="btn">Praticar</a>
-        </section>
+            <!-- SEMANA 3 (Exemplo de pasta que você vai criar) -->
+            <section class="card-atividade current">
+                <div class="badge orange">Fazendo</div>
+                <div class="card-info">
+                    <span class="week-number">Semana 03</span>
+                    <h3>Flexbox e Grid</h3>
+                    <p>Posicionamento avançado e responsividade para dispositivos móveis.</p>
+                </div>
+                <a href="SEMANA 3/index.html" class="btn-link">Ver Atividade <i class="fas fa-external-link-alt"></i></a>
+            </section>
 
-        <!-- Atividade 5: Leitura -->
-        <section class="card">
-            <div class="icon"><i class="fas fa-book"></i></div>
-            <h3>Leitura</h3>
-            <p>Livros técnicos</p>
-            <a href="#" class="btn">Minha Estante</a>
-        </section>
+            <!-- CARD DE PROJETOS COMPLEMENTARES -->
+            <section class="card-atividade github">
+                <div class="badge blue">GitHub</div>
+                <div class="card-info">
+                    <span class="week-number">Extra</span>
+                    <h3>Repositório Completo</h3>
+                    <p>Acesse o código fonte de todos os exercícios no meu perfil.</p>
+                </div>
+                <a href="https://github.com/SEU_USER" target="_blank" class="btn-link">Ir para GitHub <i class="fab fa-github"></i></a>
+            </section>
 
-        <!-- Atividade 6: Exercícios -->
-        <section class="card">
-            <div class="icon"><i class="fas fa-dumbbell"></i></div>
-            <h3>Saúde</h3>
-            <p>Treino diário e meditação.</p>
-            <a href="#" class="btn">Ver Plano</a>
-        </section>
+        </div>
     </main>
 
     <footer>
-        <p>Foco e persistência vencem o talento. 🚀</p>
+        <p>Desenvolvido durante as aulas de Engenharia de Software • 2026</p>
     </footer>
 
 </body>
