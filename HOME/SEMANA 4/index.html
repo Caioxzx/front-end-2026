@@ -6,19 +6,20 @@
     <meta name="author" content="Portal Computação">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arquivo Confuso da Computação</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body style="margin-left: 2px;">
 
 <div id="pagina">
 
     <header id="topo">
-        <h1>Arquivo (Quase) Perdido da Ciência da Computação</h1>
-        <p>Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
-    </header>
-
+        <h1 style="text-align: center; font-size:20px;">Arquivo (Quase) Perdido da Ciência da Computação</h1>
+        <p  style="text-align: center; font-size:20px;">Uma coletânea caótica de fatos históricos, curiosos e inesperados.</p>
+    </header><br><br><br><br>
     <nav id="menu-principal">
-        <ul>
+        <ul class="menu bg-base-200 rounded-box w-56">
             <li><a href="#pioneiros">Pioneiros</a></li>
             <li><a href="#bugs">Bugs</a></li>
             <li><a href="#internet">Internet</a></li>
@@ -26,38 +27,58 @@
             <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
             <li><a href="#formulario">Envie Algo</a></li>
         </ul>
-    </nav>
+    </nav><br><br><br><br>
 
     <main>
 
         <section id="pioneiros">
-            <h2>Pioneiros Esquecidos</h2>
+            <h2>Pioneiros Esquecidos</h2><br>
 
             <article>
-                <h3>Ada Lovelace</h3>
-                <p>Considerada a primeira programadora da história.</p>
-                <details>
-                    <summary>Ver mais</summary>
-                    <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
-                </details>
-            </article>
-
+                <div class="card bg-base-100 w-96 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Ada Lovelace</h3>
+                        <p>Considerada a primeira programadora da história.</p>
+                        <details>
+                            <summary>Ver mais</summary>
+                        <p>Ela escreveu um algoritmo para a Máquina Analítica no século XIX.</p>
+                        </details>
+                    </div>
+                    <figure>
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvGz5ViIvrijpg9YIDYE8Jpof5km9pDhArMjTDb-LfYvonIJFd49tYBM_mkmE1djLmW93qt08OmgXS3CP5VOTeeqUnNxkKskM6XcS9rQE&s=10"
+                            alt="Shoes" 
+                        />
+                    </figure>
+                </div>      
+           </article><br><br>
             <article>
-                <h3>Alan Turing</h3>
-                <p>Criador do conceito de Máquina de Turing.</p>
-                <blockquote>
-                    "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
-                </blockquote>
-            </article>
-
+                <div class="card bg-base-100 w-96 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title">Alan Turing</h3>
+                        <p>Criador do conceito de Máquina de Turing.</p>
+                        <blockquote>
+                            "Podemos ver apenas um pouco do futuro, mas o suficiente para perceber que há muito a fazer."
+                        </blockquote>
+                    </div>
+                    <figure>
+                        <img
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQb0Akahzn6jlQpZ4w0m2sw9zfAP7Qr1TS-VJ0nfKYppKjWJXu1s_iIeAYVrefu0Te98HP9TfhuAK_5hdBXAStSigbvzqO04Om-5I0Q2Co&s=10"
+                          alt="Shoes" 
+                        />
+                    </figure>
+                </div>
+            </article><br><br>
             <aside>
                 <h4>Curiosidade lateral</h4>
                 <p>Durante décadas, o trabalho de Turing foi mantido em segredo.</p>
             </aside>
-        </section>
+        </section><br><br><br><br>
 
-        <section id="bugs">
-            <h2>Histórias de Bugs</h2>
+        <div class="mockup-window border border-base-300 w-full">
+             <div class="grid place-content-center border-t border-base-300 h-80">
+                <section id="bugs">
+                <h2>Histórias de Bugs</h2>
 
             <article>
                 <h3>O Primeiro Bug Real</h3>
@@ -75,10 +96,13 @@
 I'M THE CREEPER : CATCH ME IF YOU CAN
                 </pre>
             </article>
-        </section>
-
-        <section id="internet">
-            <h2>Curiosidades da Internet</h2>
+        </section><br>
+        </div>
+        </div><br><br><br>
+        <div class="mockup-window border border-base-300 w-full">
+             <div class="grid place-content-center border-t border-base-300 h-80">
+            <section id="internet">
+                <h2>Curiosidades da Internet</h2>
 
             <article>
                 <h3>Primeiro Website</h3>
@@ -102,8 +126,11 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
                 <code>:-D</code>
             </article>
         </section>
-
-        <section id="linguagens">
+        </div>
+        </div><br><br><br><br>
+        <div class="mockup-window border border-base-300 w-full">
+             <div class="grid place-content-center border-t border-base-300 h-80">
+            <section id="linguagens">
             <h2>Linguagens de Programação</h2>
 
             <article>
@@ -152,8 +179,13 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
                 </table>
             </div>
         </section>
-
-        <section id="linha-do-tempo">
+    </div>
+    </div>
+    </div>
+            <br><br><br><br>
+            <div class="mockup-window border border-base-300 w-full">
+            <div class="grid place-content-center border-t border-base-300 h-80">
+            <section id="linha-do-tempo">
             <h2>Linha do Tempo Aleatória</h2>
 
             <ol>
@@ -164,7 +196,8 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
                 <li>2007 - Popularização dos smartphones</li>
             </ol>
         </section>
-
+        </div>
+        </div>
 
 </div>
 
@@ -172,7 +205,7 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
 <header>
     <h1>Fatos Inúteis (Mas Incríveis) da Ciência da Computação</h1>
     <p>Informações que não vão melhorar seu código… mas vão melhorar sua aula.</p>
-</header>
+</header><br><br><br><br>
 
 <nav>
     <ul>
@@ -182,10 +215,11 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
         <li><a href="#aleatorio">Aleatoriedades</a></li>
         <li><a href="#form">Envie Algo Inútil</a></li>
     </ul>
-</nav>
+</nav><br><br><br><br>
 
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="nomes">
     <h2>Nomes Estranhos da Computação</h2>
 
@@ -221,8 +255,11 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
     </article>
 
 </section>
+</div>
+</div><br><br><br><br>
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="acidentes">
 
     <h2>Acidentes Tecnológicos Surpreendentes</h2>
@@ -254,8 +291,11 @@ I'M THE CREEPER : CATCH ME IF YOU CAN
     </article>
 
 </section>
+</div>
+</div><br><br><br><br>
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="dinheiro">
 
     <h2>Erros Caríssimos</h2>
@@ -279,8 +319,11 @@ Valor atual: melhor não calcular.
     </article>
 
 </section>
+</div>
+</div><br><br><br><br>
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="aleatorio">
 
     <h2>Coisas Aleatórias que Você Não Pediu</h2>
@@ -343,6 +386,8 @@ Valor atual: melhor não calcular.
     <h1>Coisas Que Seus Professores Não Contaram Sobre Computação</h1>
     <p>Fatos obscuros, bugs absurdos e Easter eggs históricos.</p>
 </header>
+</div>
+</div><br><br><br><br>
 
 <nav>
     <ul>
@@ -351,9 +396,10 @@ Valor atual: melhor não calcular.
         <li><a href="#comandos-secretos">Comandos Estranhos</a></li>
         <li><a href="#formulario-secreto">Envie Algo Suspeito</a></li>
     </ul>
-</nav>
+</nav><br><br><br><br>
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="easter-eggs">
 
     <h2>Easter Eggs Reais e Oficiais</h2>
@@ -393,9 +439,12 @@ Valor atual: melhor não calcular.
     </article>
 
 </section>
+</div>
+</div><br><br><br><br>
 
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="bugs-absurdos">
 
     <h2>Bugs Absurdos da História</h2>
@@ -438,9 +487,12 @@ Valor atual: melhor não calcular.
     </article>
 
 </section>
+</div>
+</div><br><br><br><br>
 
 
-
+<div class="mockup-window border border-base-300 w-full">
+<div class="grid place-content-center border-t border-base-300 h-80">
 <section id="comandos-secretos">
 
     <h2>Comandos Estranhos e Inúteis</h2>
@@ -514,36 +566,37 @@ CON CON
     </table>
 
 </section>
-
+</div>
+</div><br><br><br><br>
 
 <section id="form">
 
     <h2>Envie um Fato Inútil</h2>
+    <div style="border-radius: 5px;">
+        <form>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Cadastro de Inutilidades</legend>
 
-    <form>
-        <fieldset>
-            <legend>Cadastro de Inutilidades</legend>
+                <label>Nome:</label>
+                <input type="text" name="nome">
 
-            <label>Nome:</label>
-            <input type="text" name="nome">
+                <label>Fato Inútil:</label>
+                <input type="text" name="fato">
 
-            <label>Fato Inútil:</label>
-            <input type="text" name="fato">
+                <label>Grau de inutilidade (0-10):</label>
+               <input type="number" name="grau" min="0" max="10">
 
-            <label>Grau de inutilidade (0-10):</label>
-            <input type="number" name="grau" min="0" max="10">
-
-            <input type="submit" value="Enviar inutilidade">
-        </fieldset>
-    </form>
-    
-</section>
+                <button class="btn"><input type="submit" value="Enviar inutilidade"></button>
+            </fieldset>
+        </form>
+    </div>    
+</section><br><br><br><br>
  <section id="formulario">
             <h2>Envie sua Curiosidade</h2>
-
+            <div style="border-radius: 5px;">
             <form>
-                <fieldset>
-                    <legend>Informações</legend>
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Informações</legend>
 
                     <label>Nome:</label>
                     <input type="text" name="nome">
@@ -565,19 +618,20 @@ CON CON
                     <label>Sua curiosidade:</label>
                     <textarea name="curiosidade"></textarea>
 
-                    <input type="submit" value="Enviar">
+                    <button class="btn"><input type="submit" value="Enviar"></button>
                 </fieldset>
             </form>
-        </section>
+        </div>
+        </section><br><br><br><br>
 
     
 <section id="formulario-secreto">
 
     <h2>Envie um Bug ou Easter Egg</h2>
-
+    <div style="border-radius: 5px;">
     <form>
-        <fieldset>
-            <legend>Cadastro Suspeito</legend>
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend">Cadastro Suspeito</legend>
 
             <label>Seu nome:</label>
             <input type="text" name="nome">
@@ -595,24 +649,24 @@ CON CON
             <label>Grau de estranheza (1-10):</label>
             <input type="number" min="1" max="10">
 
-            <input type="submit" value="Enviar para os arquivos secretos">
+            <button class="btn"><input type="submit" value="Enviar para os arquivos secretos"></button>
         </fieldset>
     </form>
-
-</section>
+    </div>
+</section><br><br><br><br>
 
 
 </main>
 </body>
-<footer>
-    <p>© 2026 Instituto Internacional de Informações Desnecessárias</p>
-    <address>Email: inutilidades@caosdigital.com</address>
-      <p>&copy; 2026 Arquivo Confuso da Computação</p>
-        <address>
+<footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10">
+    <p class="link link-hover">© 2026 Instituto Internacional de Informações Desnecessárias</p>
+    <address class="link link-hover">Email: inutilidades@caosdigital.com</address>
+      <p class="link link-hover">&copy; 2026 Arquivo Confuso da Computação</p>
+        <address class="link link-hover">
             Contato: contato@computacao.com
         </address>
-         <p>© 2026 Arquivo Ultra-Secreto da Computação</p>
-    <address>contato@ultrasecreto.dev</address>
+         <p class="link link-hover">© 2026 Arquivo Ultra-Secreto da Computação</p>
+    <address class="link link-hover">contato@ultrasecreto.dev</address>
 </footer>
 
 </div>
