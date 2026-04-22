@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Mundo 2026 - Informações</title>
+    <link rel="stylesheet" href="style_copa.css">
+</head>
+<body>
+    <nav>
+        <a href="#sedes">Organização e Sedes</a>
+        <a href="#formato">Novo Formato</a>
+        <a href="#expectativas">Expectativas</a>
+    </nav>
+
+    <header>
+        <h1>Informações sobre a Copa Do Mundo 2026</h1>
+    </header>
+
+    <main>
+        <section id="sedes" class="secao-copa">
+            <h2>🌍 Organização e Sedes</h2>
+            <p>A Copa do Mundo FIFA de 2026 será a primeira edição realizada em três países: Estados Unidos, Canadá e México. Esta edição contará com 16 cidades-sede espalhadas pela América do Norte.</p>
+        </section>
+
+        <section id="formato" class="secao-copa">
+            <h2>⚽ Novo Formato</h2>
+            <p>Pela primeira vez, o torneio terá 48 seleções participantes. O novo formato visa aumentar a representatividade de todos os continentes na maior festa do futebol mundial.</p>
+        </section>
+
+        <section id="expectativas" class="secao-copa">
+            <h2>🏆 Expectativas e Impacto</h2>
+            <p>Espera-se que esta seja a Copa com maior público da história, gerando um impacto econômico sem precedentes nos países anfitriões e modernizando as infraestruturas esportivas.</p>
+        </section>
+
+        <button id="btn-tabela" onclick="mostrarTabela()">Mostrar Tabela de Jogos</button>
+        <div id="container-tabela"></div>
+    </main>
+
+    <script>
+        function mostrarTabela() {
+            const container = document.getElementById('container-tabela');
+            // Evita duplicar a imagem
+            if (!document.getElementById('img-tabela')) {
+                const img = document.createElement('img');
+                img.src = 'Tabela_Jogos.jpg';
+                img.id = 'img-tabela';
+                img.alt = 'Tabela de Jogos';
+                img.style.maxWidth = '100%';
+                img.style.marginTop = '20px';
+                img.style.borderRadius = '10px';
+                container.appendChild(img);
+            }
+        }
+    </script>
+</body>
+</html>

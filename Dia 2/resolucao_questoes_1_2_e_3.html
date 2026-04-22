@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Copa do Mundo - Grupos</title>
+    <style>
+        /* Questão 02 - Estilização */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8; /* cor de fundo suave */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center; /* Cabeçalho centralizado */
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        /* Container Flex para alinhamento e espaçamento */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 25px; /* itens minimamente espaçados entre si */
+        }
+
+        /* Cartões de itens como destaque */
+        .cartao-grupo {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 12px; /* border-radius */
+            padding: 20px; /* padding */
+            width: 320px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .cartao-grupo h2 {
+            color: #3498db;
+            text-align: center;
+            border-bottom: 2px solid #f0f4f8;
+            padding-bottom: 10px;
+        }
+
+        .cartao-grupo h3 {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        details {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e8f4fd;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Questão 01 - Estrutura HTML -->
+    <header>
+        <h1>Fase de Grupos - Copa</h1>
+    </header>
+
+    <div class="container" id="grupos-container">
+        <!-- Grupo A -->
+        <div class="cartao-grupo" id="grupo-1">
+            <h2 id="titulo-g1">🅰️ Grupo A</h2>
+            <h3>Seleções</h3>
+            <ul id="lista-g1">
+                <li>México</li>
+                <li>África do Sul</li>
+                <li>Coreia do Sul</li>
+                <li>República Tcheca</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <span id="fatos-g1"><strong>Fatos:</strong> O jogo de abertura será México x África do Sul. Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas, com histórico equilibrado.</span>
+            </details>
+        </div>
+
+        <!-- Grupo B -->
+        <div class="cartao-grupo" id="grupo-2">
+            <h2 id="titulo-g2">🅱️ Grupo B</h2>
+            <h3>Seleções</h3>
+            <ul id="lista-g2">
+                <li>Canadá</li>
+                <li>Suíça</li>
+                <li>Catar</li>
+                <li>Vaga Europeia (Bósnia)</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <span id="fatos-g2"><strong>Fatos:</strong> O Canadá joga em casa, fator importante de desempenho. Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.</span>
+            </details>
+        </div>
+
+        <!-- Grupo C -->
+        <div class="cartao-grupo" id="grupo-3">
+            <h2 id="titulo-g3">🅲 Grupo C</h2>
+            <h3>Seleções</h3>
+            <ul id="lista-g3">
+                <li>Brasil</li>
+                <li>Marrocos</li>
+                <li>Haiti</li>
+                <li>Escócia</li>
+            </ul>
+            <details>
+                <summary>Saiba Mais</summary>
+                <span id="fatos-g3"><strong>Fatos:</strong> Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.</span>
+            </details>
+        </div>
+    </div>
+
+    <!-- Questão 03 - Botão e Lógica JS -->
+    <div class="btn-container">
+        <button onclick="proximo()">Próximo</button>
+    </div>
+
+    <script>
+        // Variável de controle de estado
+        let exibindoDEF = false;
+
+        function proximo() {
+            if (!exibindoDEF) {
+                // Atualiza para os Grupos D, E, F
+                document.getElementById('titulo-g1').innerText = "🅳 Grupo D";
+                document.getElementById('lista-g1').innerHTML = "<li>Estados Unidos</li><li>Paraguai</li><li>Austrália</li><li>Turquia</li>";
+                document.getElementById('fatos-g1').innerHTML = "<strong>Fatos:</strong> Os EUA jogam em casa, vantagem histórica em Copas. <br> Austrália enfrenta frequentemente seleções sul-americanas em torneios.";
+
+                document.getElementById('titulo-g2').innerText = "🅴 Grupo E";
+                document.getElementById('lista-g2').innerHTML = "<li>Alemanha</li><li>Equador</li><li>Costa do Marfin</li><li>Curaçao</li>";
+                document.getElementById('fatos-g2').innerHTML = "<strong>Fatos:</strong> Alemanha costuma dominar fases de grupos.<br>Equador e Costa do Marfim têm estilos físicos semelhantes.";
+
+                document.getElementById('titulo-g3').innerText = "🅵 Grupo F";
+                document.getElementById('lista-g3').innerHTML = "<li>Holanda</li><li>Japão</li><li>Tunísia</li><li>Suécia</li>";
+                document.getElementById('fatos-g3').innerHTML = "<strong>Fatos:</strong> Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.";
+                
+                exibindoDEF = true;
+                document.querySelector('button').innerText = "Voltar aos Primeiros Grupos";
+            } else {
+                // Retorna aos Grupos A, B, C
+                document.getElementById('titulo-g1').innerText = "🅰️ Grupo A";
+                document.getElementById('lista-g1').innerHTML = "<li>México</li><li>África do Sul</li><li>Coreia do Sul</li><li>República Tcheca</li>";
+                document.getElementById('fatos-g1').innerHTML = "<strong>Fatos:</strong> O jogo de abertura será México x África do Sul. Confrontos entre Coreia do Sul e seleções europeias já ocorreram em várias Copas, com histórico equilibrado.";
+
+                document.getElementById('titulo-g2').innerText = "🅱️ Grupo B";
+                document.getElementById('lista-g2').innerHTML = "<li>Canadá</li><li>Suíça</li><li>Catar</li><li>Vaga Europeia (Bósnia)</li>";
+                document.getElementById('fatos-g2').innerHTML = "<strong>Fatos:</strong> O Canadá joga em casa, fator importante de desempenho. Catar e Suíça já se enfrentaram recentemente em amistosos internacionais.";
+
+                document.getElementById('titulo-g3').innerText = "🅲 Grupo C";
+                document.getElementById('lista-g3').innerHTML = "<li>Brasil</li><li>Marrocos</li><li>Haiti</li><li>Escócia</li>";
+                document.getElementById('fatos-g3').innerHTML = "<strong>Fatos:</strong> Brasil, Marrocos e Escócia já dividiram grupo em 1998. Brasil nunca perdeu para a Escócia em Copas.";
+                
+                exibindoDEF = false;
+                document.querySelector('button').innerText = "Próximo";
+            }
+        }
+    </script>
+</body>
+</html>
